@@ -21,3 +21,5 @@ JavaScript | w3schools http://w3schools.com
 
 Ryan Waite | Memory Game Webinar
 
+EasyTimer.js | https://albert-gonzalez.github.io/easytimer.js
+

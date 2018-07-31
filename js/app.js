@@ -7,7 +7,10 @@ let secondCard;
 let matchCardnumber = 0;
 let movescount = 0;
 let stars = [document.querySelectorAll('.fa-star')];
-let ratingvalue = 0; 
+let ratingvalue = 0;
+let timercount = new Timer();
+
+// console.log(timercount.getTimeValues().toString());
 //console.log(stars);
 
 
@@ -73,6 +76,8 @@ function generateGameBoard() {
 // creat faunction to match crds
 function startGame(tempCard) {
 
+    timer();
+
     tempCard.classList.add('open');
     tempCard.classList.add('show');
 
@@ -96,11 +101,11 @@ function startGame(tempCard) {
         visibleCard = tempCard;
         movescount++;
         // console.log(movescount);
-
+        
         moveCounter();
     } else {
         // Create object that's will have id and name
-        let item = { 
+        let item = {
             id: tempCard.getAttribute('id'),
             name: tempCard.getAttribute('name')
         };
@@ -143,14 +148,14 @@ function checkMatchCard(item) {
 function clearSelectedCards() {
     setTimeout(() => {
         if (firstCard) {
-            firstCard.classList.remove('open'); 
-            firstCard.classList.remove('show'); 
+            firstCard.classList.remove('open');
+            firstCard.classList.remove('show');
             firstCard = null;
         }
 
         if (secondCard) {
-            secondCard.classList.remove('open'); 
-            secondCard.classList.remove('show'); 
+            secondCard.classList.remove('open');
+            secondCard.classList.remove('show');
             secondCard = null;
         }
     }, 1000);
@@ -160,13 +165,14 @@ function clearSelectedCards() {
 //Game over funcatio to check if user finshed game or no
 function gameOver() {
     // debugger;/
-    if (matchCardnumber == 8) {
+    if (matchCardnumber == 1) {
 
         let modal = document.querySelector('.popup');
         let close = document.querySelector('.close');
 
         document.querySelector("#moves").textContent = movescount;
         document.querySelector("#rating").textContent = ratingvalue;
+        document.querySelector('#timer').textContent = timercount.getTimeValues().toString();
 
         //   debugger;
         modal.style.display = "block";
@@ -213,17 +219,34 @@ function rating() {
             star[1].classList.remove("gold-star");
             ratingvalue = " Good " + 1;
         } else if (movescount === 30) {
-            star[0].classList.remove("gold-star");      
-        }
-        else if (movescount <= 19){
-            ratingvalue = " Excellent " + 3; 
+            star[0].classList.remove("gold-star");
+        } else if (movescount <= 19) {
+            ratingvalue = " Excellent " + 3;
         }
     }
 
 }
+
+// funcation to track time for game
+
+ function timer() {
+   
+    timercount.start();
+    timercount.addEventListener('secondsUpdated', function (e) {
+
+        let basicUsagetimer = document.querySelector('#basicUsage');
+        basicUsagetimer.textContent = timercount.getTimeValues().toString();
+    });
+
+};
+
+
+
 // fire function
 generateGameBoard();
 playAgain();
+
+
 
 
 /*
