@@ -165,7 +165,7 @@ function clearSelectedCards() {
 //Game over funcatio to check if user finshed game or no
 function gameOver() {
     // debugger;/
-    if (matchCardnumber == 1) {
+    if (matchCardnumber == 8) {
 
         let modal = document.querySelector('.popup');
         let close = document.querySelector('.close');
