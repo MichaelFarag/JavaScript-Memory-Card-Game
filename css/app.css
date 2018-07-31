@@ -103,7 +103,46 @@ h1 {
     display: inline-block;
 }
 
+.gold-star{color: gold}
+
 .score-panel .restart {
     float: right;
+    cursor: pointer;
+}
+
+/* Popup */
+.popup {
+    background: #02ccba;
+    z-index: 1;
+    display: none;
+    margin: 0 auto;
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+}
+
+.content {
+    padding: 10px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.562);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.close {
+    color: #000;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
     cursor: pointer;
 }

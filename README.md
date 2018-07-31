@@ -1,20 +1,18 @@
-# Memory Game Project
+# Memory Game Project : JavaScript native 
 
-## Table of Contents
+project developed using HTMl, CSS, JavaScript.
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+## How to Play
 
-## Instructions
+1- The objective is to collect the most pairs of cards.
+2- If they successfully match a pair they get to keep the cards, and that player gets another turn.
+3- When a player turns over two cards that do not match, those cards are turned face down again (in the same position)
+4-The trick is to remember which cards are where.
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
 
-To get started, open `js/app.js` and start building out the app's functionality
+## Reference
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+JavaScript | MDN https://developer.mozilla.org/bm/docs/Web/JavaScript
+JavaScript | w3schools http://w3schools.com
+Ryan Waite | Memory Game Webinar
 
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
