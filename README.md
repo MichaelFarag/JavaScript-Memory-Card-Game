@@ -2,7 +2,7 @@
 
 project developed using HTMl, CSS, JavaScript.
 
-## Click to Play | https://michaelfarag.github.io/JavaScript-Memory-Card-Game/
+### Click to Play | https://michaelfarag.github.io/JavaScript-Memory-Card-Game/
 
 ## How to Play
 
