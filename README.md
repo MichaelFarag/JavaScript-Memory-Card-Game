@@ -2,6 +2,8 @@
 
 project developed using HTMl, CSS, JavaScript.
 
+## Click to Play | https://michaelfarag.github.io/JavaScript-Memory-Card-Game/
+
 ## How to Play
 
 1- The objective is to collect the most pairs of cards.
