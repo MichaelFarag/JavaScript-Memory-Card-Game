@@ -146,6 +146,9 @@ function checkMatchCard(item) {
 
 // function to rmove class open and show from  cards [first and second card]
 function clearSelectedCards() {
+    let allCards = document.querySelectorAll('.card:not(.match)');
+    allCards.forEach(card => card.removeAttribute('onclick'));
+
     setTimeout(() => {
         if (firstCard) {
             firstCard.classList.remove('open');
@@ -158,6 +161,8 @@ function clearSelectedCards() {
             secondCard.classList.remove('show');
             secondCard = null;
         }
+
+        allCards.forEach(card => card.setAttribute('onclick', 'startGame(this)'));
     }, 1000);
 }
 
